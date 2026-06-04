@@ -9,7 +9,7 @@ const links = [
 
 export function Navbar() {
   return (
-    <header className="sticky top-0 z-20 border-b border-[var(--line)] bg-[rgba(11,13,16,0.86)] backdrop-blur">
+    <header className="sticky top-0 z-20 border-b border-[var(--line)] bg-[rgba(255,255,255,0.86)] backdrop-blur">
       <Container className="flex min-h-16 items-center justify-between gap-4">
         <Link className="text-sm font-semibold text-[var(--text)]" href="/">
           Opal Signal
