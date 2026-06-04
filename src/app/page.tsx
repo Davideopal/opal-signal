@@ -3,179 +3,173 @@ import { Card } from "@/components/ui/card";
 import { Container } from "@/components/ui/container";
 import { Section } from "@/components/ui/section";
 
-const audiences = [
-  "Psicologi e psicoterapeuti",
-  "Coach e consulenti",
-  "Nutrizionisti e fisioterapisti",
-  "Professionisti del benessere e della relazione",
-];
-
-const problems = [
-  "Presenza online frammentata o difficile da spiegare",
-  "Sito generico che non guida verso il contatto",
-  "Campagne improvvisate, scollegate dal messaggio",
-  "Contenuti pubblicati senza una direzione chiara",
-];
-
-const services = [
-  {
-    title: "Consulenza strategica",
-    text: "Capiamo cosa ti serve davvero, quali obiettivi vuoi raggiungere e quali risultati realistici si possono costruire.",
-  },
-  {
-    title: "Posizionamento e offerta",
-    text: "Chiarire messaggio, target, differenziazione, percorso cliente e struttura dell’offerta.",
-  },
-  {
-    title: "Sito e landing page",
-    text: "Costruire pagine chiare, credibili e orientate alla conversione, senza complicare il sistema prima del necessario.",
-  },
-  {
-    title: "Campagne Meta Ads",
-    text: "Progettare campagne coerenti con posizionamento, pagina e obiettivo di acquisizione.",
-  },
-  {
-    title: "Ottimizzazione",
-    text: "Leggere dati e risposte del mercato per migliorare progressivamente messaggio, pagina e campagne.",
-  },
-];
-
-const method = [
-  {
-    title: "Consulenza",
-    text: "Capiamo cosa ti serve, dove vuoi arrivare e quali risultati realistici si possono costruire.",
-  },
-  {
-    title: "Strategia",
-    text: "Definiamo posizionamento, messaggio, target e offerta.",
-  },
-  {
-    title: "Architettura",
-    text: "Organizziamo il percorso: pagina, CTA, contenuti essenziali e punto di conversione.",
-  },
-  {
-    title: "Implementazione",
-    text: "Costruiamo sito o landing e campagna pubblicitaria.",
-  },
-  {
-    title: "Ottimizzazione",
-    text: "Analizziamo dati e risposte del mercato per migliorare progressivamente.",
-  },
-];
-
-const differences = [
-  {
-    title: "Non solo design",
-    text: "Prima strategia, poi sito. La pagina deve rendere chiaro perché sceglierti.",
-  },
-  {
-    title: "Non solo social",
-    text: "Prima posizionamento, poi campagne. Non vendiamo gestione post come cuore del servizio.",
-  },
-  {
-    title: "Non solo visibilità",
-    text: "L’obiettivo è generare richieste più qualificate, non solo più traffico.",
-  },
-];
-
-const faqs = [
-  {
-    question: "Lavorate solo con psicologi?",
-    answer:
-      "No. Il focus è sui professionisti del benessere, della relazione e della consulenza: psicologi, coach, nutrizionisti, fisioterapisti e profili affini.",
-  },
-  {
-    question: "Devo già avere un sito?",
-    answer:
-      "No. Possiamo partire da una diagnosi della presenza attuale e capire se serve migliorare ciò che esiste o costruire una landing più chiara.",
-  },
-  {
-    question: "Gestite anche i social?",
-    answer:
-      "Il cuore del lavoro non è pubblicare post al posto tuo. I contenuti possono supportare il percorso, ma il focus resta strategia, pagina e acquisizione.",
-  },
-  {
-    question: "Promettete risultati garantiti?",
-    answer:
-      "No. Costruiamo una presenza più chiara, credibile e misurabile, pensata per aumentare la qualità delle richieste. Le garanzie assolute non sono serie.",
-  },
-];
-
 const primaryCtaClass =
   "inline-flex min-h-11 items-center justify-center rounded-md bg-[var(--accent)] px-5 text-sm font-semibold text-[#061014] transition hover:bg-[#9af1ff] focus:outline-none focus:ring-2 focus:ring-[var(--accent)] focus:ring-offset-2 focus:ring-offset-[var(--background)]";
 
 const secondaryCtaClass =
   "inline-flex min-h-11 items-center justify-center rounded-md border border-[var(--line)] bg-transparent px-5 text-sm font-semibold text-[var(--text)] transition hover:border-[var(--accent)] focus:outline-none focus:ring-2 focus:ring-[var(--accent)] focus:ring-offset-2 focus:ring-offset-[var(--background)]";
 
-const signalMap = [
+const signalIndicators = [
+  { label: "Posizionamento", value: "da chiarire", tone: "text-amber-200" },
+  { label: "Pagina / landing", value: "da allineare", tone: "text-sky-200" },
+  { label: "Campagna", value: "solo quando serve", tone: "text-cyan-200" },
+  { label: "Richiesta", value: "più qualificata", tone: "text-emerald-200" },
+];
+
+const diagnosisPoints = [
+  "dove il messaggio è poco chiaro",
+  "quale parte della pagina blocca la richiesta",
+  "se ha senso attivare campagne Meta Ads",
+  "quale sistema minimo costruire prima",
+];
+
+const specializations = [
   {
-    label: "Input",
-    title: "Segnale debole",
-    text: "Messaggio poco chiaro, presenza frammentata, campagne scollegate.",
+    title: "Analisi",
+    text: "Presenza attuale, messaggio, competitor, percorso utente e attriti che riducono la qualità delle richieste.",
   },
   {
-    label: "Metodo",
-    title: "Segnale da chiarire",
-    text: "Perché scegliere te, per chi sei adatto, quale percorso proponi.",
+    title: "Strategia",
+    text: "Target, offerta, posizionamento, promessa realistica, CTA e priorità operative.",
   },
   {
-    label: "Output",
-    title: "Segnale forte",
-    text: "Pagina chiara, campagna coerente, richiesta più qualificata.",
+    title: "Implementazione",
+    text: "Sito o landing, campagne, tracciamento leggero, lettura dati e ottimizzazione progressiva.",
+  },
+];
+
+const services = [
+  "Strategia e posizionamento",
+  "Copy e messaggio",
+  "Sito / landing page",
+  "Funnel di richiesta contatto",
+  "Meta Ads quando ha senso",
+  "Ottimizzazione e lettura dati",
+  "Automazioni leggere, solo se utili",
+  "Documentazione del sistema",
+];
+
+const audiences = [
+  "Psicologi e psicoterapeuti",
+  "Coach e consulenti",
+  "Professionisti del benessere",
+  "Nutrizionisti, fisioterapisti e profili affini",
+  "Professionisti che vogliono comunicare con etica e chiarezza",
+];
+
+const notFor = [
+  "Chi cerca promesse di clienti garantiti",
+  "Chi vuole solo post social",
+  "Chi vuole accendere ads senza sistemare messaggio e pagina",
+  "Chi vuole comunicazione aggressiva o ingannevole",
+  "Chi non vuole partecipare alla fase strategica",
+];
+
+const transformation = [
+  {
+    title: "Prima",
+    items: ["sito generico", "contenuti scollegati", "CTA debole", "campagne non coordinate"],
+  },
+  {
+    title: "Dopo",
+    items: ["messaggio chiaro", "landing orientata alla richiesta", "campagna coerente", "percorso misurabile"],
+  },
+];
+
+const faqs = [
+  {
+    question: "Promettete risultati garantiti?",
+    answer:
+      "No. Sarebbe poco serio. Lavoriamo per rendere messaggio, pagina e campagne più chiari, misurabili e coerenti con il tuo posizionamento.",
+  },
+  {
+    question: "Fate campagne Meta Ads?",
+    answer:
+      "Sì, ma solo quando messaggio, pagina e obiettivo sono abbastanza chiari. Non accendiamo campagne per coprire un sistema fragile.",
+  },
+  {
+    question: "Devo già avere un sito?",
+    answer:
+      "No. Possiamo partire da una diagnosi della presenza attuale e decidere se migliorare ciò che esiste o costruire una landing più adatta.",
+  },
+  {
+    question: "Gestite anche i social?",
+    answer:
+      "Non vendiamo gestione post come cuore del servizio. I contenuti possono supportare il percorso, ma il focus resta acquisizione qualificata.",
+  },
+  {
+    question: "Lavorate solo con psicologi?",
+    answer:
+      "No. Il focus è su professionisti del benessere, della relazione e della consulenza che vogliono comunicare con autorevolezza.",
+  },
+  {
+    question: "Quanto tempo serve?",
+    answer:
+      "Dipende dallo stato di partenza. La diagnosi serve proprio a capire il primo sistema minimo da costruire senza fare troppo.",
+  },
+  {
+    question: "Serve un budget pubblicitario?",
+    answer:
+      "Per le campagne sì: il budget media è separato dal lavoro strategico e tecnico. Prima, però, verifichiamo se ha senso investirlo.",
+  },
+  {
+    question: "Il metodo è adatto a settori sensibili?",
+    answer:
+      "Sì, con prudenza. Evitiamo claim sanitari, promesse assolute e comunicazione suggestiva: chiarezza e fiducia prima di pressione commerciale.",
   },
 ];
 
 export default function Home() {
   return (
     <main className="overflow-hidden">
-      <Section className="min-h-[78vh] items-center">
-        <Container className="grid gap-12 py-20 md:grid-cols-[1.08fr_0.92fr] md:items-center lg:py-28">
+      <Section className="min-h-[82vh] items-center">
+        <Container className="grid gap-12 py-20 md:grid-cols-[1.05fr_0.95fr] md:items-center lg:py-28">
           <div>
-            <Badge>Dal messaggio confuso a un percorso chiaro</Badge>
+            <Badge>Strategia, sito e campagne per professionisti del benessere</Badge>
             <h1 className="mt-6 max-w-4xl text-4xl font-semibold leading-tight tracking-normal text-[var(--text)] md:text-6xl">
-              Costruiamo la tua presenza online per farti scegliere dai clienti giusti.
+              Costruisci un sistema digitale che ti rende chiaro, credibile e scelto dai clienti giusti.
             </h1>
             <p className="mt-6 max-w-2xl text-base leading-8 text-[var(--muted)] md:text-lg">
-              Opal Signal aiuta psicologi, coach e professionisti del benessere a chiarire il posizionamento,
-              costruire una presenza digitale credibile e attivare campagne pubblicitarie orientate a richieste
-              qualificate, senza comunicazione generica e senza dover diventare influencer.
+              Opal Signal chiarisce il posizionamento, costruisce pagine orientate alla richiesta e attiva campagne
+              solo quando il sistema è pronto. Più percorso, meno improvvisazione.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <a className={primaryCtaClass} href="#contatti">
-                Prenota una consulenza strategica
+                Richiedi una diagnosi strategica
               </a>
               <a className={secondaryCtaClass} href="#metodo">
                 Scopri il metodo
               </a>
             </div>
             <p className="mt-5 max-w-xl text-sm leading-6 text-[var(--muted)]">
-              Per professionisti competenti che vogliono essere trovati, capiti e scelti online senza imparare tutto
-              il marketing da soli.
+              Per professionisti competenti che vogliono acquisire richieste più qualificate senza diventare creator o
+              delegare tutto a post scollegati.
             </p>
           </div>
 
-          <Card className="relative overflow-hidden p-6 shadow-[0_24px_80px_rgba(16,20,24,0.08)]">
-            <div className="absolute inset-0 bg-[linear-gradient(rgba(55,201,223,0.08)_1px,transparent_1px),linear-gradient(90deg,rgba(55,201,223,0.08)_1px,transparent_1px)] bg-[size:32px_32px]" />
-            <div className="absolute -right-12 -top-12 h-40 w-40 rounded-full bg-[rgba(55,201,223,0.24)] blur-2xl" />
+          <Card className="relative overflow-hidden p-6 shadow-[0_28px_100px_rgba(94,231,255,0.10)]">
+            <div className="absolute inset-0 bg-[linear-gradient(rgba(94,231,255,0.08)_1px,transparent_1px),linear-gradient(90deg,rgba(94,231,255,0.08)_1px,transparent_1px)] bg-[size:30px_30px]" />
+            <div className="absolute -right-14 -top-14 h-44 w-44 rounded-full bg-[rgba(94,231,255,0.18)] blur-2xl" />
             <div className="relative">
               <div className="flex items-center justify-between gap-4">
                 <div>
-                  <p className="text-sm font-semibold uppercase text-[var(--accent-strong)]">Signal Map</p>
-                  <p className="mt-2 text-sm leading-6 text-[var(--muted)]">Da correggere → da chiarire → da attivare</p>
+                  <p className="text-sm font-semibold uppercase text-[var(--accent)]">Signal Map</p>
+                  <p className="mt-2 text-sm leading-6 text-[var(--muted)]">Diagnosi del percorso digitale</p>
                 </div>
-                <span className="h-3 w-3 rounded-full bg-[var(--accent)] shadow-[0_0_0_8px_rgba(55,201,223,0.12)]" />
+                <span className="h-3 w-3 rounded-full bg-[var(--accent)] shadow-[0_0_0_8px_rgba(94,231,255,0.12)]" />
               </div>
-              <div className="relative mt-7 grid gap-4">
-                <div className="absolute bottom-5 left-[1.2rem] top-5 w-px bg-gradient-to-b from-[var(--accent)] via-[var(--line)] to-transparent" />
-                {signalMap.map((item) => (
-                  <div className="relative grid grid-cols-[2.5rem_1fr] gap-4 rounded-md border border-[var(--line)] bg-white/86 p-4 backdrop-blur" key={item.title}>
-                    <div className="flex justify-center">
-                      <span className="mt-1 h-3 w-3 rounded-full border-2 border-white bg-[var(--accent)] shadow-[0_0_0_5px_rgba(55,201,223,0.14)]" />
+              <div className="mt-7 grid gap-3">
+                {signalIndicators.map((item) => (
+                  <div
+                    className="rounded-md border border-[var(--line)] bg-white/[0.03] p-4 backdrop-blur"
+                    key={item.label}
+                  >
+                    <div className="flex items-center justify-between gap-4">
+                      <p className="text-sm font-medium text-[var(--text)]">{item.label}</p>
+                      <p className={`text-xs font-semibold uppercase ${item.tone}`}>{item.value}</p>
                     </div>
-                    <div>
-                      <p className="text-xs font-semibold uppercase tracking-normal text-[var(--accent-strong)]">{item.label}</p>
-                      <p className="mt-1 font-semibold text-[var(--text)]">{item.title}</p>
-                      <p className="mt-2 text-sm leading-6 text-[var(--muted)]">{item.text}</p>
+                    <div className="mt-3 h-1.5 rounded-full bg-white/[0.06]">
+                      <div className="h-full w-2/3 rounded-full bg-[var(--accent)]" />
                     </div>
                   </div>
                 ))}
@@ -186,48 +180,83 @@ export default function Home() {
       </Section>
 
       <Section>
-        <Container className="grid gap-10 py-16 md:grid-cols-[0.85fr_1.15fr] md:items-start lg:py-24">
+        <Container className="grid gap-8 py-16 md:grid-cols-[1fr_0.9fr] md:items-center lg:py-24">
           <div>
-            <Badge>Il punto di partenza</Badge>
-            <h2 className="mt-5 text-3xl font-semibold tracking-normal text-[var(--text)] md:text-5xl">
-              Non ti serve solo più visibilità. Ti serve un percorso chiaro.
+            <Badge>Diagnosi strategica</Badge>
+            <h2 className="mt-5 text-3xl font-semibold text-[var(--text)] md:text-5xl">
+              Scopri dove il tuo sistema digitale perde richieste qualificate.
             </h2>
-          </div>
-          <div>
-            <p className="text-lg leading-8 text-[var(--muted)]">
-              Molti professionisti hanno competenze solide, ma online comunicano in modo frammentato: un sito
-              generico, contenuti scollegati, campagne improvvisate o nessun percorso reale verso il contatto.
+            <p className="mt-5 max-w-2xl text-base leading-8 text-[var(--muted)]">
+              Non serve aggiungere altri strumenti se il percorso non è chiaro. La diagnosi serve a capire cosa blocca
+              fiducia, comprensione e contatto.
             </p>
-            <div className="mt-8 grid gap-3 sm:grid-cols-2">
-              {problems.map((problem) => (
-                <Card className="p-5" key={problem}>
-                  <p className="text-sm leading-6 text-[var(--muted)]">{problem}</p>
-                </Card>
+          </div>
+          <Card className="p-6">
+            <div className="grid gap-3">
+              {diagnosisPoints.map((point) => (
+                <p className="rounded-md border border-[var(--line)] bg-white/[0.03] p-4 text-sm text-[var(--muted)]" key={point}>
+                  {point}
+                </p>
               ))}
             </div>
-            <p className="mt-8 rounded-lg border border-[var(--line)] bg-[var(--surface-soft)] p-5 text-base font-medium leading-7 text-[var(--text)]">
-              Ti aiutiamo a trasformare una presenza online confusa in un percorso chiaro che porta le persone
-              giuste a capirti, fidarsi e contattarti.
+            <a className={`${primaryCtaClass} mt-6 w-full`} href="#contatti">
+              Richiedi una diagnosi strategica
+            </a>
+          </Card>
+        </Container>
+      </Section>
+
+      <Section>
+        <Container className="grid gap-10 py-16 md:grid-cols-[0.9fr_1.1fr] lg:py-24">
+          <div>
+            <Badge>Partner giusti</Badge>
+            <h2 className="mt-5 text-3xl font-semibold text-[var(--text)] md:text-5xl">
+              Selezioniamo professionisti con cui costruire valore reale.
+            </h2>
+          </div>
+          <div className="grid gap-4">
+            <p className="text-lg leading-8 text-[var(--muted)]">
+              Lavoriamo meglio con professionisti competenti, etici e disponibili a chiarire posizionamento, offerta e
+              processo prima di investire in traffico.
             </p>
+            <Card className="p-6">
+              <p className="text-sm leading-7 text-[var(--muted)]">
+                Non promettiamo risultati garantiti, non lavoriamo su comunicazione ingannevole e non usiamo campagne
+                per coprire un messaggio debole.
+              </p>
+            </Card>
           </div>
         </Container>
       </Section>
 
       <Section>
         <Container className="py-16 lg:py-24">
-          <div className="max-w-2xl">
-            <Badge>Per chi</Badge>
-            <h2 className="mt-5 text-3xl font-semibold tracking-normal text-[var(--text)] md:text-5xl">
-              Per professionisti che vogliono crescere senza diventare creator.
+          <div className="max-w-3xl">
+            <Badge>Problema competitivo</Badge>
+            <h2 className="mt-5 text-3xl font-semibold text-[var(--text)] md:text-5xl">
+              La tua competenza è chiara offline, ma online viene capita?
             </h2>
             <p className="mt-5 text-base leading-8 text-[var(--muted)]">
-              Non parliamo ai pazienti. Parliamo a professionisti che vogliono comunicare meglio il proprio valore.
+              Molti professionisti perdono richieste perché sito, messaggio, contenuti e campagne non lavorano insieme.
+              Il risultato è una presenza visibile ma poco convincente.
             </p>
           </div>
-          <div className="mt-10 grid gap-4 md:grid-cols-4">
-            {audiences.map((audience) => (
-              <Card className="p-5" key={audience}>
-                <p className="text-sm font-medium leading-6 text-[var(--text)]">{audience}</p>
+        </Container>
+      </Section>
+
+      <Section id="metodo">
+        <Container className="py-16 lg:py-24">
+          <div className="max-w-3xl">
+            <Badge>Specializzazione Opal</Badge>
+            <h2 className="mt-5 text-3xl font-semibold text-[var(--text)] md:text-5xl">
+              Siamo specializzati in sistemi digitali chiari.
+            </h2>
+          </div>
+          <div className="mt-10 grid gap-4 md:grid-cols-3">
+            {specializations.map((item) => (
+              <Card className="p-6" key={item.title}>
+                <h3 className="text-xl font-semibold text-[var(--text)]">{item.title}</h3>
+                <p className="mt-4 text-sm leading-7 text-[var(--muted)]">{item.text}</p>
               </Card>
             ))}
           </div>
@@ -239,41 +268,18 @@ export default function Home() {
           <div className="flex flex-col gap-5 md:flex-row md:items-end md:justify-between">
             <div className="max-w-2xl">
               <Badge>Servizi</Badge>
-              <h2 className="mt-5 text-3xl font-semibold tracking-normal text-[var(--text)] md:text-5xl">
+              <h2 className="mt-5 text-3xl font-semibold text-[var(--text)] md:text-5xl">
                 Dal posizionamento alla richiesta di contatto.
               </h2>
             </div>
             <p className="max-w-md text-base leading-7 text-[var(--muted)]">
-              Una struttura semplice: messaggio coerente, pagina chiara, campagna pubblicitaria e ottimizzazione.
+              Non pezzi separati, ma un percorso minimo che rende più semplice capire, fidarsi e contattarti.
             </p>
           </div>
-          <div className="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {services.map((service) => (
-              <Card className="p-6" key={service.title}>
-                <h3 className="text-lg font-semibold text-[var(--text)]">{service.title}</h3>
-                <p className="mt-4 text-sm leading-7 text-[var(--muted)]">{service.text}</p>
-              </Card>
-            ))}
-          </div>
-        </Container>
-      </Section>
-
-      <Section id="metodo">
-        <Container className="py-16 lg:py-24">
-          <div className="max-w-3xl">
-            <Badge>Metodo</Badge>
-            <h2 className="mt-5 text-3xl font-semibold tracking-normal text-[var(--text)] md:text-5xl">
-              Un metodo semplice, dalla chiarezza alla richiesta qualificata.
-            </h2>
-          </div>
-          <div className="mt-10 grid gap-4">
-            {method.map((step, index) => (
-              <Card className="grid gap-5 p-6 md:grid-cols-[0.2fr_0.8fr] md:items-start" key={step.title}>
-                <p className="text-sm font-semibold text-[var(--accent-strong)]">{String(index + 1).padStart(2, "0")}</p>
-                <div>
-                  <h3 className="text-xl font-semibold text-[var(--text)]">{step.title}</h3>
-                  <p className="mt-3 max-w-3xl text-sm leading-7 text-[var(--muted)]">{step.text}</p>
-                </div>
+              <Card className="p-5" key={service}>
+                <p className="text-sm font-medium leading-6 text-[var(--text)]">{service}</p>
               </Card>
             ))}
           </div>
@@ -281,20 +287,30 @@ export default function Home() {
       </Section>
 
       <Section>
-        <Container className="py-16 lg:py-24">
-          <div className="grid gap-10 md:grid-cols-[0.9fr_1.1fr] md:items-start">
-            <div>
-              <Badge>Differenza</Badge>
-              <h2 className="mt-5 text-3xl font-semibold tracking-normal text-[var(--text)] md:text-5xl">
-                Non siamo qui per gestirti i post.
-              </h2>
+        <Container className="grid gap-10 py-16 lg:grid-cols-2 lg:py-24">
+          <div>
+            <Badge>Con chi collaboriamo</Badge>
+            <h2 className="mt-5 text-3xl font-semibold text-[var(--text)] md:text-5xl">
+              Professionisti che vogliono comunicare con etica e chiarezza.
+            </h2>
+            <div className="mt-8 grid gap-3">
+              {audiences.map((audience) => (
+                <p className="rounded-md border border-[var(--line)] bg-white/[0.03] p-4 text-sm text-[var(--muted)]" key={audience}>
+                  {audience}
+                </p>
+              ))}
             </div>
-            <div className="grid gap-4">
-              {differences.map((item) => (
-                <Card className="p-6" key={item.title}>
-                  <h3 className="text-lg font-semibold text-[var(--text)]">{item.title}</h3>
-                  <p className="mt-3 text-sm leading-7 text-[var(--muted)]">{item.text}</p>
-                </Card>
+          </div>
+          <div>
+            <Badge>Per chi non è Opal</Badge>
+            <h2 className="mt-5 text-3xl font-semibold text-[var(--text)] md:text-5xl">
+              Non siamo adatti a ogni progetto.
+            </h2>
+            <div className="mt-8 grid gap-3">
+              {notFor.map((item) => (
+                <p className="rounded-md border border-[var(--line)] bg-white/[0.03] p-4 text-sm text-[var(--muted)]" key={item}>
+                  {item}
+                </p>
               ))}
             </div>
           </div>
@@ -303,11 +319,56 @@ export default function Home() {
 
       <Section>
         <Container className="py-16 lg:py-24">
+          <div className="max-w-3xl">
+            <Badge>Esempio, non case study</Badge>
+            <h2 className="mt-5 text-3xl font-semibold text-[var(--text)] md:text-5xl">
+              Esempio di trasformazione strategica.
+            </h2>
+            <p className="mt-5 text-base leading-8 text-[var(--muted)]">
+              Non inventiamo risultati o clienti. Questo è un esempio di come cambia il sistema quando messaggio,
+              pagina e campagna iniziano a lavorare insieme.
+            </p>
+          </div>
+          <div className="mt-10 grid gap-4 md:grid-cols-2">
+            {transformation.map((block) => (
+              <Card className="p-6" key={block.title}>
+                <h3 className="text-xl font-semibold text-[var(--text)]">{block.title}</h3>
+                <div className="mt-5 grid gap-3">
+                  {block.items.map((item) => (
+                    <p className="rounded-md border border-[var(--line)] bg-white/[0.03] p-3 text-sm text-[var(--muted)]" key={item}>
+                      {item}
+                    </p>
+                  ))}
+                </div>
+              </Card>
+            ))}
+          </div>
+        </Container>
+      </Section>
+
+      <Section id="contatti">
+        <Container className="py-16 lg:py-24">
+          <div className="rounded-xl border border-[var(--line)] bg-[var(--surface)] p-8 md:p-12">
+            <Badge>Primo passo</Badge>
+            <h2 className="mt-5 max-w-3xl text-3xl font-semibold text-[var(--text)] md:text-5xl">
+              Prenota 30 minuti di diagnosi strategica.
+            </h2>
+            <p className="mt-5 max-w-2xl text-base leading-8 text-[var(--muted)]">
+              Nella call capiamo dove il messaggio è poco chiaro, quale parte del sito blocca la conversione, se ha
+              senso attivare campagne e qual è il primo sistema minimo da costruire.
+            </p>
+            <a className={`${primaryCtaClass} mt-8`} href="#contatti">
+              Richiedi una diagnosi strategica
+            </a>
+          </div>
+        </Container>
+      </Section>
+
+      <Section className="border-b-0">
+        <Container className="py-16 lg:py-24">
           <div className="max-w-2xl">
             <Badge>FAQ</Badge>
-            <h2 className="mt-5 text-3xl font-semibold tracking-normal text-[var(--text)] md:text-5xl">
-              Domande prima di iniziare.
-            </h2>
+            <h2 className="mt-5 text-3xl font-semibold text-[var(--text)] md:text-5xl">Domande frequenti.</h2>
           </div>
           <div className="mt-10 grid gap-4 md:grid-cols-2">
             {faqs.map((faq) => (
@@ -316,26 +377,6 @@ export default function Home() {
                 <p className="mt-3 text-sm leading-7 text-[var(--muted)]">{faq.answer}</p>
               </Card>
             ))}
-          </div>
-        </Container>
-      </Section>
-
-      <Section id="contatti" className="border-b-0">
-        <Container className="py-16 lg:py-24">
-          <div className="rounded-xl border border-[var(--line)] bg-[var(--text)] p-8 text-white md:p-12">
-            <Badge className="border-white/15 bg-white/10 text-[var(--accent)]">Primo passo</Badge>
-            <h2 className="mt-5 max-w-3xl text-3xl font-semibold tracking-normal md:text-5xl">
-              Vuoi capire se il tuo progetto può diventare più chiaro e acquisire richieste migliori?
-            </h2>
-            <p className="mt-5 max-w-2xl text-base leading-8 text-white/72">
-              Partiamo da una consulenza strategica: analizziamo presenza attuale, messaggio, obiettivi e prossimi
-              passi realistici.
-            </p>
-            <div className="mt-8">
-              <a className={primaryCtaClass} href="#contatti">
-                Prenota una consulenza strategica
-              </a>
-            </div>
           </div>
         </Container>
       </Section>
