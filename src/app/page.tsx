@@ -1,4 +1,5 @@
 import { Badge } from "@/components/ui/badge";
+import { OpalMascotBackground } from "@/components/brand/opal-mascot-background";
 import { Card } from "@/components/ui/card";
 import { Container } from "@/components/ui/container";
 import { Section } from "@/components/ui/section";
@@ -77,8 +78,9 @@ const faqs = [
 export default function Home() {
   return (
     <main className="overflow-hidden">
-      <Section className="min-h-[76vh] items-center">
-        <Container className="grid gap-12 py-20 md:grid-cols-[1.08fr_0.92fr] md:items-center lg:py-28">
+      <Section className="relative min-h-[76vh] items-center overflow-hidden">
+        <OpalMascotBackground variant="hero" />
+        <Container className="relative z-10 grid gap-12 py-20 md:grid-cols-[1.08fr_0.92fr] md:items-center lg:py-28">
           <div>
             <Badge>Dal messaggio confuso a un percorso chiaro</Badge>
             <h1 className="mt-6 max-w-4xl text-4xl font-semibold leading-tight tracking-normal text-[var(--text)] md:text-6xl">
@@ -185,8 +187,9 @@ export default function Home() {
         </Container>
       </Section>
 
-      <Section id="metodo">
-        <Container className="grid gap-10 py-16 md:grid-cols-[0.9fr_1.1fr] md:items-start lg:py-24">
+      <Section className="relative overflow-hidden" id="metodo">
+        <OpalMascotBackground variant="method" />
+        <Container className="relative z-10 grid gap-10 py-16 md:grid-cols-[0.9fr_1.1fr] md:items-start lg:py-24">
           <div>
             <Badge>Metodo</Badge>
             <h2 className="mt-5 text-3xl font-semibold tracking-normal text-[var(--text)] md:text-5xl">
@@ -229,18 +232,21 @@ export default function Home() {
 
       <Section id="contatti">
         <Container className="py-16 lg:py-24">
-          <div className="rounded-xl border border-[var(--line)] bg-[var(--text)] p-8 text-white md:p-12">
-            <Badge className="border-white/15 bg-white/10 text-[var(--accent)]">Primo passo</Badge>
-            <h2 className="mt-5 max-w-3xl text-3xl font-semibold tracking-normal md:text-5xl">
-              Vuoi capire se il tuo progetto può diventare più chiaro?
-            </h2>
-            <p className="mt-5 max-w-2xl text-base leading-8 text-white/72">
-              Partiamo da una consulenza strategica: presenza attuale, messaggio, obiettivi e prossimi passi realistici.
-            </p>
-            <div className="mt-8">
-              <a className={primaryCtaClass} href="#contatti">
-                Prenota una consulenza strategica
-              </a>
+          <div className="relative overflow-hidden rounded-xl border border-[var(--line)] bg-[var(--text)] p-8 text-white md:p-12">
+            <OpalMascotBackground variant="cta" />
+            <div className="relative z-10">
+              <Badge className="border-white/15 bg-white/10 text-[var(--accent)]">Primo passo</Badge>
+              <h2 className="mt-5 max-w-3xl text-3xl font-semibold tracking-normal md:text-5xl">
+                Vuoi capire se il tuo progetto può diventare più chiaro?
+              </h2>
+              <p className="mt-5 max-w-2xl text-base leading-8 text-white/72">
+                Partiamo da una consulenza strategica: presenza attuale, messaggio, obiettivi e prossimi passi realistici.
+              </p>
+              <div className="mt-8">
+                <a className={primaryCtaClass} href="#contatti">
+                  Prenota una consulenza strategica
+                </a>
+              </div>
             </div>
           </div>
           <div className="mt-10 grid gap-4 md:grid-cols-3">
