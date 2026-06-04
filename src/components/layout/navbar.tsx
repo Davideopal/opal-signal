@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { OpalLogo } from "@/components/brand/opal-logo";
 import { Container } from "@/components/ui/container";
 
 const links = [
@@ -11,8 +12,8 @@ export function Navbar() {
   return (
     <header className="sticky top-0 z-20 border-b border-[var(--line)] bg-[rgba(255,255,255,0.84)] backdrop-blur">
       <Container className="flex min-h-16 items-center justify-between gap-4">
-        <Link className="text-sm font-semibold text-[var(--text)]" href="/">
-          Opal Signal
+        <Link className="rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--accent)] focus:ring-offset-2 focus:ring-offset-[var(--background)]" href="/">
+          <OpalLogo size={32} />
         </Link>
         <nav className="hidden items-center gap-6 text-sm text-[var(--muted)] md:flex">
           {links.map((link) => (
