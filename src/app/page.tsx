@@ -9,11 +9,27 @@ const primaryCtaClass =
 const secondaryCtaClass =
   "inline-flex min-h-11 items-center justify-center rounded-md border border-[var(--line)] bg-transparent px-5 text-sm font-semibold text-[var(--text)] transition hover:border-[var(--accent)] focus:outline-none focus:ring-2 focus:ring-[var(--accent)] focus:ring-offset-2 focus:ring-offset-[var(--background)]";
 
-const signalIndicators = [
-  { label: "Posizionamento", value: "da chiarire", tone: "text-amber-200" },
-  { label: "Pagina / landing", value: "da allineare", tone: "text-sky-200" },
-  { label: "Campagna", value: "solo quando serve", tone: "text-cyan-200" },
-  { label: "Richiesta", value: "più qualificata", tone: "text-emerald-200" },
+const heroJourney = [
+  {
+    label: "Segnale",
+    title: "Presenza confusa",
+    text: "Messaggio disperso, sito generico, contenuti e campagne non coordinati.",
+  },
+  {
+    label: "Diagnosi",
+    title: "Priorità chiare",
+    text: "Capire cosa blocca fiducia, comprensione e richiesta di contatto.",
+  },
+  {
+    label: "Sistema",
+    title: "Pagina + campagna",
+    text: "Posizionamento, landing, CTA e traffico lavorano nella stessa direzione.",
+  },
+  {
+    label: "Output",
+    title: "Richieste migliori",
+    text: "Le persone giuste capiscono se sei adatto e arrivano al contatto con più contesto.",
+  },
 ];
 
 const diagnosisPoints = [
@@ -147,32 +163,44 @@ export default function Home() {
             </p>
           </div>
 
-          <Card className="relative overflow-hidden p-6 shadow-[0_28px_100px_rgba(94,231,255,0.10)]">
-            <div className="absolute inset-0 bg-[linear-gradient(rgba(94,231,255,0.08)_1px,transparent_1px),linear-gradient(90deg,rgba(94,231,255,0.08)_1px,transparent_1px)] bg-[size:30px_30px]" />
-            <div className="absolute -right-14 -top-14 h-44 w-44 rounded-full bg-[rgba(94,231,255,0.18)] blur-2xl" />
+          <Card className="relative overflow-hidden p-6 shadow-[0_28px_100px_rgba(8,125,146,0.12)]">
+            <div className="absolute inset-0 bg-[linear-gradient(rgba(55,201,223,0.12)_1px,transparent_1px),linear-gradient(90deg,rgba(55,201,223,0.10)_1px,transparent_1px)] bg-[size:28px_28px]" />
+            <div className="absolute -right-14 -top-14 h-44 w-44 rounded-full bg-[rgba(55,201,223,0.24)] blur-2xl" />
+            <div className="absolute -bottom-20 left-8 h-52 w-52 rounded-full bg-[rgba(8,125,146,0.08)] blur-3xl" />
             <div className="relative">
               <div className="flex items-center justify-between gap-4">
                 <div>
-                  <p className="text-sm font-semibold uppercase text-[var(--accent)]">Signal Map</p>
-                  <p className="mt-2 text-sm leading-6 text-[var(--muted)]">Diagnosi del percorso digitale</p>
+                  <p className="text-sm font-semibold uppercase text-[var(--accent-strong)]">Opal Path</p>
+                  <p className="mt-2 text-sm leading-6 text-[var(--muted)]">Dal segnale debole al contatto qualificato</p>
                 </div>
-                <span className="h-3 w-3 rounded-full bg-[var(--accent)] shadow-[0_0_0_8px_rgba(94,231,255,0.12)]" />
+                <span className="h-3 w-3 rounded-full bg-[var(--accent)] shadow-[0_0_0_8px_rgba(55,201,223,0.14)]" />
               </div>
-              <div className="mt-7 grid gap-3">
-                {signalIndicators.map((item) => (
+              <div className="relative mt-7 grid gap-4">
+                <div className="absolute bottom-7 left-[1.05rem] top-7 w-px bg-gradient-to-b from-[var(--accent)] via-[var(--line)] to-transparent" />
+                {heroJourney.map((item, index) => (
                   <div
-                    className="rounded-md border border-[var(--line)] bg-white/[0.03] p-4 backdrop-blur"
-                    key={item.label}
+                    className="relative grid grid-cols-[2.1rem_1fr] gap-4 rounded-md border border-[var(--line)] bg-white/82 p-4 backdrop-blur"
+                    key={item.title}
                   >
-                    <div className="flex items-center justify-between gap-4">
-                      <p className="text-sm font-medium text-[var(--text)]">{item.label}</p>
-                      <p className={`text-xs font-semibold uppercase ${item.tone}`}>{item.value}</p>
+                    <div className="flex justify-center">
+                      <span className="flex h-9 w-9 items-center justify-center rounded-full border border-[rgba(55,201,223,0.35)] bg-[var(--surface-soft)] text-xs font-semibold text-[var(--accent-strong)] shadow-[0_0_0_5px_rgba(55,201,223,0.10)]">
+                        {index + 1}
+                      </span>
                     </div>
-                    <div className="mt-3 h-1.5 rounded-full bg-white/[0.06]">
-                      <div className="h-full w-2/3 rounded-full bg-[var(--accent)]" />
+                    <div>
+                      <p className="text-xs font-semibold uppercase text-[var(--accent-strong)]">{item.label}</p>
+                      <p className="mt-1 text-base font-semibold text-[var(--text)]">{item.title}</p>
+                      <p className="mt-2 text-sm leading-6 text-[var(--muted)]">{item.text}</p>
                     </div>
                   </div>
                 ))}
+              </div>
+              <div className="mt-5 rounded-md border border-[rgba(55,201,223,0.28)] bg-[rgba(55,201,223,0.10)] p-4">
+                <p className="text-sm font-semibold text-[var(--text)]">Potenzialità del percorso</p>
+                <p className="mt-2 text-sm leading-6 text-[var(--muted)]">
+                  Non aggiunge rumore: ordina messaggio, pagina e campagne per rendere più semplice capire perché
+                  contattarti.
+                </p>
               </div>
             </div>
           </Card>
