@@ -1,4 +1,5 @@
 import { Badge } from "@/components/ui/badge";
+import { OpalMascotBackground } from "@/components/brand/opal-mascot-background";
 import { Card } from "@/components/ui/card";
 import { Container } from "@/components/ui/container";
 import { Section } from "@/components/ui/section";
@@ -138,9 +139,10 @@ const faqs = [
 export default function Home() {
   return (
     <main className="overflow-hidden">
-      <Section className="min-h-[82vh] items-center">
-        <Container className="grid gap-12 py-20 md:grid-cols-[1.05fr_0.95fr] md:items-center lg:py-28">
-          <div>
+      <Section className="relative min-h-[82vh] items-center overflow-hidden">
+        <OpalMascotBackground variant="hero" />
+        <Container className="relative z-10 grid gap-12 py-20 md:grid-cols-[1.05fr_0.95fr] md:items-center lg:py-28">
+          <div className="relative z-10">
             <Badge>Strategia, sito e campagne per professionisti del benessere</Badge>
             <h1 className="mt-6 max-w-4xl text-4xl font-semibold leading-tight tracking-normal text-[var(--text)] md:text-6xl">
               Costruisci un sistema digitale che ti rende chiaro, credibile e scelto dai clienti giusti.
@@ -163,10 +165,10 @@ export default function Home() {
             </p>
           </div>
 
-          <Card className="relative overflow-hidden p-6 shadow-[0_28px_100px_rgba(8,125,146,0.12)]">
-            <div className="absolute inset-0 bg-[linear-gradient(rgba(55,201,223,0.12)_1px,transparent_1px),linear-gradient(90deg,rgba(55,201,223,0.10)_1px,transparent_1px)] bg-[size:28px_28px]" />
-            <div className="absolute -right-14 -top-14 h-44 w-44 rounded-full bg-[rgba(55,201,223,0.24)] blur-2xl" />
-            <div className="absolute -bottom-20 left-8 h-52 w-52 rounded-full bg-[rgba(8,125,146,0.08)] blur-3xl" />
+          <Card className="relative overflow-hidden bg-[rgba(17,20,24,0.82)] p-6 shadow-[0_28px_100px_rgba(94,231,255,0.10)] backdrop-blur">
+            <div className="absolute inset-0 bg-[linear-gradient(rgba(94,231,255,0.08)_1px,transparent_1px),linear-gradient(90deg,rgba(94,231,255,0.07)_1px,transparent_1px)] bg-[size:28px_28px]" />
+            <div className="absolute -right-14 -top-14 h-44 w-44 rounded-full bg-[rgba(94,231,255,0.18)] blur-2xl" />
+            <div className="absolute -bottom-20 left-8 h-52 w-52 rounded-full bg-[rgba(185,167,255,0.08)] blur-3xl" />
             <div className="relative">
               <div className="flex items-center justify-between gap-4">
                 <div>
@@ -179,11 +181,11 @@ export default function Home() {
                 <div className="absolute bottom-7 left-[1.05rem] top-7 w-px bg-gradient-to-b from-[var(--accent)] via-[var(--line)] to-transparent" />
                 {heroJourney.map((item, index) => (
                   <div
-                    className="relative grid grid-cols-[2.1rem_1fr] gap-4 rounded-md border border-[var(--line)] bg-white/82 p-4 backdrop-blur"
+                    className="relative grid grid-cols-[2.1rem_1fr] gap-4 rounded-md border border-[var(--line)] bg-white/[0.035] p-4 backdrop-blur"
                     key={item.title}
                   >
                     <div className="flex justify-center">
-                      <span className="flex h-9 w-9 items-center justify-center rounded-full border border-[rgba(55,201,223,0.35)] bg-[var(--surface-soft)] text-xs font-semibold text-[var(--accent-strong)] shadow-[0_0_0_5px_rgba(55,201,223,0.10)]">
+                      <span className="flex h-9 w-9 items-center justify-center rounded-full border border-[rgba(94,231,255,0.34)] bg-[var(--surface-soft)] text-xs font-semibold text-[var(--accent-strong)] shadow-[0_0_0_5px_rgba(94,231,255,0.10)]">
                         {index + 1}
                       </span>
                     </div>
@@ -195,7 +197,7 @@ export default function Home() {
                   </div>
                 ))}
               </div>
-              <div className="mt-5 rounded-md border border-[rgba(55,201,223,0.28)] bg-[rgba(55,201,223,0.10)] p-4">
+              <div className="mt-5 rounded-md border border-[rgba(94,231,255,0.24)] bg-[rgba(94,231,255,0.08)] p-4">
                 <p className="text-sm font-semibold text-[var(--text)]">Potenzialità del percorso</p>
                 <p className="mt-2 text-sm leading-6 text-[var(--muted)]">
                   Non aggiunge rumore: ordina messaggio, pagina e campagne per rendere più semplice capire perché
@@ -272,17 +274,18 @@ export default function Home() {
         </Container>
       </Section>
 
-      <Section id="metodo">
-        <Container className="py-16 lg:py-24">
+      <Section className="relative overflow-hidden" id="metodo">
+        <OpalMascotBackground variant="method" />
+        <Container className="relative z-10 py-16 lg:py-24">
           <div className="max-w-3xl">
             <Badge>Specializzazione Opal</Badge>
             <h2 className="mt-5 text-3xl font-semibold text-[var(--text)] md:text-5xl">
               Siamo specializzati in sistemi digitali chiari.
             </h2>
           </div>
-          <div className="mt-10 grid gap-4 md:grid-cols-3">
+          <div className="relative mt-10 grid gap-4 md:grid-cols-3">
             {specializations.map((item) => (
-              <Card className="p-6" key={item.title}>
+              <Card className="bg-[rgba(17,20,24,0.88)] p-6 backdrop-blur" key={item.title}>
                 <h3 className="text-xl font-semibold text-[var(--text)]">{item.title}</h3>
                 <p className="mt-4 text-sm leading-7 text-[var(--muted)]">{item.text}</p>
               </Card>
@@ -291,11 +294,12 @@ export default function Home() {
         </Container>
       </Section>
 
-      <Section id="servizi">
-        <Container className="py-16 lg:py-24">
+      <Section className="relative overflow-hidden" id="servizi">
+        <OpalMascotBackground variant="system" />
+        <Container className="relative z-10 py-16 lg:py-24">
           <div className="flex flex-col gap-5 md:flex-row md:items-end md:justify-between">
             <div className="max-w-2xl">
-              <Badge>Servizi</Badge>
+              <Badge>Sistema</Badge>
               <h2 className="mt-5 text-3xl font-semibold text-[var(--text)] md:text-5xl">
                 Dal posizionamento alla richiesta di contatto.
               </h2>
@@ -306,7 +310,7 @@ export default function Home() {
           </div>
           <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {services.map((service) => (
-              <Card className="p-5" key={service}>
+              <Card className="bg-[rgba(17,20,24,0.88)] p-5 backdrop-blur" key={service}>
                 <p className="text-sm font-medium leading-6 text-[var(--text)]">{service}</p>
               </Card>
             ))}
@@ -376,18 +380,21 @@ export default function Home() {
 
       <Section id="contatti">
         <Container className="py-16 lg:py-24">
-          <div className="rounded-xl border border-[var(--line)] bg-[var(--surface)] p-8 md:p-12">
-            <Badge>Primo passo</Badge>
-            <h2 className="mt-5 max-w-3xl text-3xl font-semibold text-[var(--text)] md:text-5xl">
-              Prenota 30 minuti di diagnosi strategica.
-            </h2>
-            <p className="mt-5 max-w-2xl text-base leading-8 text-[var(--muted)]">
-              Nella call capiamo dove il messaggio è poco chiaro, quale parte del sito blocca la conversione, se ha
-              senso attivare campagne e qual è il primo sistema minimo da costruire.
-            </p>
-            <a className={`${primaryCtaClass} mt-8`} href="#contatti">
-              Richiedi una diagnosi strategica
-            </a>
+          <div className="relative overflow-hidden rounded-xl border border-[var(--line)] bg-[var(--surface)] p-8 md:p-12">
+            <OpalMascotBackground variant="cta" />
+            <div className="relative z-10">
+              <Badge>Primo passo</Badge>
+              <h2 className="mt-5 max-w-3xl text-3xl font-semibold text-[var(--text)] md:text-5xl">
+                Prenota 30 minuti di diagnosi strategica.
+              </h2>
+              <p className="mt-5 max-w-2xl text-base leading-8 text-[var(--muted)]">
+                Nella call capiamo dove il messaggio è poco chiaro, quale parte del sito blocca la conversione, se ha
+                senso attivare campagne e qual è il primo sistema minimo da costruire.
+              </p>
+              <a className={`${primaryCtaClass} mt-8`} href="#contatti">
+                Richiedi una diagnosi strategica
+              </a>
+            </div>
           </div>
         </Container>
       </Section>
