@@ -71,17 +71,17 @@ Implicazione: le future modifiche al sito dovrebbero rispettare questa architett
 
 Non implica: aggiungere librerie nuove senza motivo.
 
-## Decisione 006 — Design dark-first
+## Decisione 006 — Identita' visuale Opal Signal progressiva
 
-Stato: presa.
+Stato: aggiornata.
 
-Decisione: Opal Signal parte da un design dark-first.
+Decisione: l'identita' visuale di Opal Signal puo' evolvere in modo progressivo, senza bloccare il progetto su una sola direzione dark-first.
 
-Motivo: la direzione estetica vuole essere piu' forte, tech, premium e diversa dalla comunicazione sanitaria o da agenzia generica.
+Motivo: durante la Fase 1 il tema chiaro si e' dimostrato piu' leggibile, premium e adatto alla prima homepage reale.
 
-Implicazione: la UI iniziale lavora su sfondo scuro, superfici controllate, testo leggibile e accenti luminosi.
+Implicazione: Opal Signal mantiene una direzione tech e premium, con accento cyan e mascotte astratta, ma puo' usare tema chiaro o scuro in base alla funzione della pagina.
 
-Non implica: rendere il sito cupo, poco leggibile o decorativo senza funzione.
+Non implica: cambiare identita' a ogni iterazione o usare estetiche incoerenti.
 
 ## Decisione 007 — Non creare CRM o SaaS ora
 
@@ -123,12 +123,48 @@ Non implica: creare processi pesanti per micro-correzioni banali.
 
 ## Decisione 010 — Priorita' successiva: Fase 1 homepage reale
 
+Stato: completata.
+
+Decisione: dopo la chiusura della Fase 0, la priorita' era progettare e costruire la homepage reale di Opal Signal.
+
+Motivo: senza homepage reale non si poteva validare percezione, tono, posizionamento, CTA e chiarezza dell'offerta.
+
+Implicazione: la Fase 1 e' stata completata con PR #4, `Phase 1 homepage`, mergiata su `main`.
+
+Non implica: che il sito sia gia' completo di percorso contatti, legal, dominio o campagne.
+
+## Decisione 011 — Fase 1 chiusa con homepage reale e snella
+
 Stato: presa.
 
-Decisione: dopo la chiusura della Fase 0, la priorita' e' progettare la homepage reale di Opal Signal.
+Decisione: la Fase 1 si chiude con una homepage chiara, corta, premium tech e orientata alla comprensione del servizio.
 
-Motivo: senza homepage reale non si puo' validare percezione, tono, posizionamento, CTA e chiarezza dell'offerta.
+Motivo: la versione approvata comunica meglio il posizionamento e riduce complessita' non necessaria.
 
-Implicazione: il prossimo task dovrebbe essere strategico e strutturale, non una costruzione completa del sito in un solo passaggio.
+Implicazione: la base ora e' sufficiente per passare alla conversione contatti minima.
 
-Non implica: partire subito con campagne, CRM, template clienti o automazioni.
+Non implica: implementare subito `/percorsi`, pricing, CRM, automazioni o blog.
+
+## Decisione 012 — Pagina `/percorsi` rimandata
+
+Stato: presa.
+
+Decisione: la pagina `/percorsi` resta una direzione approvata, ma non viene inclusa nella chiusura Fase 1.
+
+Motivo: la priorita' era completare una homepage reale e credibile senza allargare troppo il perimetro.
+
+Implicazione: `/percorsi` potra' essere valutata in una Fase 1.1 o dopo aver chiarito meglio offerta, contatto e validazione.
+
+Non implica: abbandonare Start, Growth, Enterprise come possibile struttura futura.
+
+## Decisione 013 — Prossima priorita': Fase 2 conversione contatti
+
+Stato: presa.
+
+Decisione: dopo Fase 1 la prossima priorita' consigliata e' Fase 2 — Conversione e acquisizione contatti.
+
+Motivo: ora il sito spiega cosa fa Opal Signal; il prossimo passo e' rendere semplice e misurabile il contatto.
+
+Implicazione: il prossimo blocco deve progettare form, Calendly o soluzione minima equivalente, con attenzione a privacy e legal.
+
+Non implica: attivare campagne, CRM o automazioni avanzate prima di validare il flusso base.
