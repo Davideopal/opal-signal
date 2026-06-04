@@ -12,9 +12,11 @@ Questa repository contiene la base tecnica e documentale del progetto:
 
 ## Stato attuale
 
-Fase 0: ricostruzione base.
+Fase 0: chiusa.
+Fase 1: chiusa.
+Fase 2: prossima priorita' consigliata.
 
-In questa fase non viene costruita la homepage definitiva. Viene creata una base semplice, ordinata e verificabile.
+La homepage reale di Opal Signal e' stata costruita, verificata su Vercel e mergiata su `main` con PR #4.
 
 ## Stack
 
@@ -38,3 +40,13 @@ npm run lint
 
 - Primaria: Prenota una consulenza strategica
 - Secondaria: Scopri il metodo
+
+## Memoria operativa
+
+La documentazione strategica vive in `opal-os/`:
+
+- `STRATEGIC_MEMORY.md`
+- `DECISION_LOG.md`
+- `ROADMAP.md`
+- `PHASE_0_CLOSURE_REPORT.md`
+- `PHASE_1_CLOSURE_REPORT.md`

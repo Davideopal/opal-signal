@@ -8,8 +8,8 @@ La regola principale e': avanzare per blocchi piccoli, verificabili e approvati.
 
 ```text
 Fase 0 = chiusa
-Fase 1 = prossima priorita'
-Fase 2 = dopo homepage reale
+Fase 1 = chiusa
+Fase 2 = prossima priorita'
 Fase 3 = prima di pubblicazione/campagne serie
 Fase 4 = quando sito e base trust sono pronti
 Fase 5 = dopo validazione sito Opal
@@ -32,81 +32,74 @@ Output prodotti:
 - App Router;
 - struttura `src/`;
 - componenti UI base;
-- design system dark-first;
 - documentazione iniziale;
 - deploy Vercel funzionante;
 - pipeline ChatGPT -> Codex -> GitHub -> Vercel;
 - cartella `opal-os/` come memoria strategica e operativa.
 
-Cosa non e' stato fatto:
-
-- homepage reale;
-- CRM;
-- SaaS;
-- automazioni complesse;
-- template clienti;
-- nuove skill.
-
 Criterio di completamento: main popolato, PR #1 mergiata, deploy Vercel riuscito, base documentale iniziale disponibile.
 
 ## Fase 1 — Homepage reale Opal Signal
 
-Stato: prossima priorita'.
+Stato: chiusa.
 
 Scopo: trasformare la homepage placeholder in una homepage strategica, chiara e presentabile.
 
-Cosa verra' fatto:
+Output prodotti:
 
-- analisi della homepage attuale;
-- struttura strategica della homepage reale;
-- hero;
-- problema/soluzione;
-- servizi;
-- metodo;
-- chi siamo;
-- FAQ;
-- CTA;
-- contatti.
+- homepage reale in italiano;
+- hero con messaggio orientato alla scelta da parte dei clienti giusti;
+- Signal Map nella hero;
+- sezioni problema, servizi, metodo, differenza, CTA e FAQ;
+- tema chiaro, premium tech e leggibile;
+- logo Opal in navbar;
+- mascotte Opal come elemento di sfondo sobrio;
+- CTA anchor verso metodo e contatti;
+- SEO metadata base;
+- PR #4 mergiata su `main`;
+- deploy Vercel verificato.
 
-Cosa avremo in mano:
+Cosa non e' stato fatto:
 
-- prima versione reale del sito Opal Signal;
-- messaggio piu' chiaro;
-- base per validare percezione e posizionamento.
-
-Cosa non fare in questa fase:
-
+- pagina `/percorsi`;
+- pricing pubblico;
 - CRM;
-- SaaS;
-- template clienti;
-- automazioni complesse;
-- campagne Ads;
-- nuove skill.
+- dashboard;
+- blog dinamico;
+- newsletter;
+- database;
+- automazioni;
+- legal layer completo.
+
+Criterio di completamento: homepage approvata, lint e build passati, preview Vercel verificata, PR #4 mergiata su `main`.
 
 ## Fase 2 — Conversione e acquisizione contatti
 
-Stato: futura.
+Stato: prossima priorita'.
 
-Scopo: trasformare il sito da presenza online a punto di acquisizione.
+Scopo: trasformare il sito da presenza online a punto di acquisizione contatti.
 
 Cosa verra' fatto:
 
-- CTA piu' chiare;
-- form contatti o Calendly;
-- thank-you flow minimo;
-- messaggi di conferma;
-- tracciamento base se necessario.
+- scelta del percorso contatti minimo;
+- valutazione tra Calendly, form semplice o soluzione ibrida;
+- CTA piu' operative;
+- messaggio di conferma;
+- eventuale thank-you flow minimo;
+- controllo base privacy prima di raccogliere dati personali.
 
 Cosa avremo in mano:
 
 - sito capace di ricevere richieste;
-- percorso minimo da visitatore a contatto.
+- percorso minimo da visitatore a contatto;
+- base per capire se il messaggio genera interesse reale.
 
 Cosa non fare in questa fase:
 
 - CRM complesso;
 - automazioni multilivello;
-- funnel avanzati senza dati.
+- funnel avanzati senza dati;
+- tracciamenti o pixel senza informativa adeguata.
 
 ## Fase 3 — Legal e trust layer
 
@@ -118,7 +111,7 @@ Cosa verra' fatto:
 
 - Privacy Policy;
 - Cookie Policy;
-- banner cookie;
+- banner cookie se necessario;
 - informativa contatti;
 - eventuale disclosure Meta Pixel;
 - revisione testi sensibili.
@@ -153,7 +146,7 @@ Cosa avremo in mano:
 
 Cosa non fare in questa fase:
 
-- pubblicare come definitivo un sito privo di messaggio chiaro;
+- pubblicare come definitivo un sito privo di percorso contatti e legal minimo;
 - aggiungere feature non necessarie solo per "completare".
 
 ## Fase 5 — Template clienti
