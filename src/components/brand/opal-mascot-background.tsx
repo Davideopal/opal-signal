@@ -5,10 +5,10 @@ type OpalMascotBackgroundProps = {
 };
 
 const variantClassNames = {
-  hero: "right-[-9rem] top-8 h-[34rem] w-[34rem] opacity-55 sm:h-[42rem] sm:w-[42rem] lg:right-[-7rem]",
-  method: "right-[-5rem] top-12 hidden h-[28rem] w-[28rem] opacity-25 md:block",
-  system: "left-[-7rem] top-10 hidden h-[30rem] w-[30rem] opacity-20 lg:block",
-  cta: "right-[-6rem] top-1/2 h-[28rem] w-[28rem] -translate-y-1/2 opacity-30",
+  hero: "right-[-10rem] top-8 h-[32rem] w-[32rem] opacity-20 sm:h-[40rem] sm:w-[40rem] lg:right-[-8rem]",
+  method: "right-[-7rem] top-10 hidden h-[26rem] w-[26rem] opacity-15 md:block",
+  system: "left-[-7rem] top-10 hidden h-[30rem] w-[30rem] opacity-15 lg:block",
+  cta: "right-[-7rem] top-1/2 h-[26rem] w-[26rem] -translate-y-1/2 opacity-20",
 };
 
 export function OpalMascotBackground({ variant }: OpalMascotBackgroundProps) {
