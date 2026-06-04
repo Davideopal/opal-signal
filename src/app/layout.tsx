@@ -4,8 +4,9 @@ import { Footer } from "@/components/layout/footer";
 import { Navbar } from "@/components/layout/navbar";
 
 export const metadata: Metadata = {
-  title: "Opal Signal",
-  description: "Sistemi digitali AI-native per professionisti del benessere e della relazione.",
+  title: "Opal Signal | Strategia, sito e campagne per professionisti del benessere",
+  description:
+    "Opal Signal aiuta psicologi, coach e professionisti del benessere a costruire una presenza online chiara, credibile e orientata a richieste qualificate.",
 };
 
 export default function RootLayout({
