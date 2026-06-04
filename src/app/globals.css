@@ -1,12 +1,14 @@
 @import "tailwindcss";
 
 :root {
-  --background: #0b0d10;
-  --surface: #111418;
-  --text: #f5f7fa;
-  --muted: #9aa4b2;
-  --line: #242a32;
-  --accent: #5ee7ff;
+  --background: #f7f8f8;
+  --surface: #ffffff;
+  --surface-soft: #eef8fb;
+  --text: #101418;
+  --muted: #5f6974;
+  --line: #dfe5e8;
+  --accent: #37c9df;
+  --accent-strong: #168da1;
 }
 
 * {
@@ -19,7 +21,9 @@ html {
 
 body {
   margin: 0;
-  background: var(--background);
+  background:
+    radial-gradient(circle at top right, rgba(55, 201, 223, 0.13), transparent 30rem),
+    linear-gradient(180deg, #ffffff 0%, var(--background) 44%);
   color: var(--text);
   font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
