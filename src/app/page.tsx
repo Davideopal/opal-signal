@@ -107,13 +107,31 @@ const primaryCtaClass =
 const secondaryCtaClass =
   "inline-flex min-h-11 items-center justify-center rounded-md border border-[var(--line)] bg-transparent px-5 text-sm font-semibold text-[var(--text)] transition hover:border-[var(--accent)] focus:outline-none focus:ring-2 focus:ring-[var(--accent)] focus:ring-offset-2 focus:ring-offset-[var(--background)]";
 
+const signalMap = [
+  {
+    label: "Input",
+    title: "Segnale debole",
+    text: "Messaggio poco chiaro, presenza frammentata, campagne scollegate.",
+  },
+  {
+    label: "Metodo",
+    title: "Segnale da chiarire",
+    text: "Perché scegliere te, per chi sei adatto, quale percorso proponi.",
+  },
+  {
+    label: "Output",
+    title: "Segnale forte",
+    text: "Pagina chiara, campagna coerente, richiesta più qualificata.",
+  },
+];
+
 export default function Home() {
   return (
     <main className="overflow-hidden">
       <Section className="min-h-[78vh] items-center">
         <Container className="grid gap-12 py-20 md:grid-cols-[1.08fr_0.92fr] md:items-center lg:py-28">
           <div>
-            <Badge>Studio strategico per professionisti del benessere</Badge>
+            <Badge>Dal messaggio confuso a un percorso chiaro</Badge>
             <h1 className="mt-6 max-w-4xl text-4xl font-semibold leading-tight tracking-normal text-[var(--text)] md:text-6xl">
               Costruiamo la tua presenza online per farti scegliere dai clienti giusti.
             </h1>
@@ -136,21 +154,28 @@ export default function Home() {
             </p>
           </div>
 
-          <Card className="relative p-6 shadow-[0_24px_80px_rgba(16,20,24,0.08)]">
-            <div className="absolute -right-12 -top-12 h-36 w-36 rounded-full bg-[rgba(55,201,223,0.22)] blur-2xl" />
+          <Card className="relative overflow-hidden p-6 shadow-[0_24px_80px_rgba(16,20,24,0.08)]">
+            <div className="absolute inset-0 bg-[linear-gradient(rgba(55,201,223,0.08)_1px,transparent_1px),linear-gradient(90deg,rgba(55,201,223,0.08)_1px,transparent_1px)] bg-[size:32px_32px]" />
+            <div className="absolute -right-12 -top-12 h-40 w-40 rounded-full bg-[rgba(55,201,223,0.24)] blur-2xl" />
             <div className="relative">
-              <p className="text-sm font-medium uppercase text-[var(--accent-strong)]">Percorso essenziale</p>
-              <div className="mt-6 grid gap-4">
-                {["Strategia", "Pagina chiara", "Campagna coerente", "Richiesta qualificata"].map((item, index) => (
-                  <div className="flex items-start gap-4 rounded-md border border-[var(--line)] bg-white p-4" key={item}>
-                    <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-md bg-[var(--surface-soft)] text-sm font-semibold text-[var(--accent-strong)]">
-                      {index + 1}
-                    </span>
+              <div className="flex items-center justify-between gap-4">
+                <div>
+                  <p className="text-sm font-semibold uppercase text-[var(--accent-strong)]">Signal Map</p>
+                  <p className="mt-2 text-sm leading-6 text-[var(--muted)]">Da correggere → da chiarire → da attivare</p>
+                </div>
+                <span className="h-3 w-3 rounded-full bg-[var(--accent)] shadow-[0_0_0_8px_rgba(55,201,223,0.12)]" />
+              </div>
+              <div className="relative mt-7 grid gap-4">
+                <div className="absolute bottom-5 left-[1.2rem] top-5 w-px bg-gradient-to-b from-[var(--accent)] via-[var(--line)] to-transparent" />
+                {signalMap.map((item) => (
+                  <div className="relative grid grid-cols-[2.5rem_1fr] gap-4 rounded-md border border-[var(--line)] bg-white/86 p-4 backdrop-blur" key={item.title}>
+                    <div className="flex justify-center">
+                      <span className="mt-1 h-3 w-3 rounded-full border-2 border-white bg-[var(--accent)] shadow-[0_0_0_5px_rgba(55,201,223,0.14)]" />
+                    </div>
                     <div>
-                      <p className="font-medium text-[var(--text)]">{item}</p>
-                      <p className="mt-1 text-sm leading-6 text-[var(--muted)]">
-                        Un passaggio ordinato verso una presenza più comprensibile e misurabile.
-                      </p>
+                      <p className="text-xs font-semibold uppercase tracking-normal text-[var(--accent-strong)]">{item.label}</p>
+                      <p className="mt-1 font-semibold text-[var(--text)]">{item.title}</p>
+                      <p className="mt-2 text-sm leading-6 text-[var(--muted)]">{item.text}</p>
                     </div>
                   </div>
                 ))}
